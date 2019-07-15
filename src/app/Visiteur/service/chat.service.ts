@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { ConstantesService } from './constantes.service';
+import { Chats } from 'src/app/Core/models/chat';
 
 
 @Injectable({
@@ -9,18 +11,13 @@ import { catchError } from 'rxjs/operators';
 })
 export class ChatService {
 
-  constructor(private http: HttpClient) { }
-
-   url = "http://localhost:3004"
+  constructor(private http: HttpClient, private constanteService : ConstantesService) { }
 
 
-  getAllChat(): Observable<any> {
-    let reqHeader = new HttpHeaders({
-      'accept': 'application/json',
-      'content-type': 'application/json'
-    });
 
-    return this.http.get("/Chat", { headers: reqHeader }).pipe(catchError(this.handleError));
+
+  getAllChats(): Observable<Array<Chats>> {
+    return <Observable<Array<Chats>>>this.http.get(this.constanteService.getConstante('URL_GET_CHATS'));
   }
 
 

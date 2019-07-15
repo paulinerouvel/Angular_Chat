@@ -15,7 +15,7 @@ export class BoutiqueComponent implements OnInit {
 
   async ngOnInit() {
 
-    this.chats = await this.chatService.getAllChat().toPromise();
+    this.chats = await this.chatService.getAllChats().toPromise();
 
     console.log(this.chats);
   }
