@@ -1,0 +1,70 @@
+.navbar{
+    background : #000000;
+    border : none;
+}
+
+.bandeau a{
+    
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.bandeau a:hover{
+    color:grey;
+    text-decoration: none;
+    font-size: 110%;
+    
+}
+
+
+.pseudo{
+    color : white;
+    padding: 8px;
+    padding-right: 25px; 
+    font-size: 25px;
+}
+
+
+#logo {
+    height: 50px;
+}
+
+li{
+    margin-right : 10px;
+}
+
+#title{
+    font-size: 25px; 
+}
+
+#item{
+    padding-top: 7px; 
+}
+
+#item_long{
+    font-size: 1px;
+}
+
+
+
+#connexion{
+    background: green;
+    color: white;
+    margin-top: 7px;
+}
+#connexion:hover{
+    background: lightgreen;
+}
+
+.btn:focus {
+    cursor: pointer;
+    outline: none;
+
+}
+
+.dropdown-item{
+    color:black;
+}
+
+.img_profil{
+    border-radius: 50px;
+}

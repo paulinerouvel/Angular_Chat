@@ -11,6 +11,10 @@ import { BoutiqueComponent } from './Visiteur/component/boutique/boutique.compon
 import { AddChatComponent } from './Visiteur/component/add-chat/add-chat.component';
 import { MesCommandesComponent } from './Visiteur/component/mes-commandes/mes-commandes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './Core/component/header/header.component';
+import { FooterComponent } from './Core/component/footer/footer.component';
+import { LoginComponent } from './Core/component/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,12 +25,17 @@ import { HttpClientModule } from '@angular/common/http';
     GestionUtilisateurComponent,
     BoutiqueComponent,
     AddChatComponent,
-    MesCommandesComponent
+    MesCommandesComponent,
+    HeaderComponent,
+    FooterComponent,
+    LoginComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
