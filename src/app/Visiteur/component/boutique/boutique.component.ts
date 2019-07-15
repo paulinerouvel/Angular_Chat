@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChatService } from '../../service/chat.service';
 
 @Component({
   selector: 'app-boutique',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoutiqueComponent implements OnInit {
 
-  constructor() { }
+  chats = [];
 
-  ngOnInit() {
+
+  constructor(private chatService : ChatService) { }
+
+  async ngOnInit() {
+
+    this.chats = await this.chatService.getAllChat().toPromise();
+
+    console.log(this.chats);
   }
 
 }

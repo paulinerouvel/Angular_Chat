@@ -10,6 +10,7 @@ import { GestionUtilisateurComponent } from './Administrateur/component/gestion-
 import { BoutiqueComponent } from './Visiteur/component/boutique/boutique.component';
 import { AddChatComponent } from './Visiteur/component/add-chat/add-chat.component';
 import { MesCommandesComponent } from './Visiteur/component/mes-commandes/mes-commandes.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MesCommandesComponent } from './Visiteur/component/mes-commandes/mes-co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
