@@ -15,6 +15,7 @@ import { HeaderComponent } from './Core/component/header/header.component';
 import { FooterComponent } from './Core/component/footer/footer.component';
 import { LoginComponent } from './Core/component/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { AdministrateurRoutingModule } from './Administrateur/administrateur-routing';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    AdministrateurRoutingModule,
+
     FormsModule
   ],
   providers: [],

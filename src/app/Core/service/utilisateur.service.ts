@@ -15,14 +15,13 @@ export class UtilisateurService {
   getAllUtilisateurs(): Observable<any> {
     return <Observable<any>>this.http.get(this.constanteService.getConstante('URL_GET_USERS'));
   }
-
   getUtilisateurById(id): Observable<any> {
     return <Observable<any>>this.http.get(this.constanteService.getConstante('URL_GET_USERS')+"/"+id);
   } 
 
 
   deleteUtilisateur(id:any) {
-    
+
   }
 
   private handleError(error: HttpErrorResponse) {
