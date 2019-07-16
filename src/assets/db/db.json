@@ -55,6 +55,14 @@
             "mail": "g.brugnet@myges.fr",
             "mdp": "gregory",
             "type": "Visiteur"
+        },
+        {
+            "id":4,
+            "nom":"admin",
+            "prenom":"admin",
+            "mail":"admin@email.com",
+            "mdp":"admin",
+            "type":"Administrateur"
         }
     ],
     "Commande": [
