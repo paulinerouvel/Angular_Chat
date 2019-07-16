@@ -29,18 +29,24 @@ export class LoginComponent implements OnInit {
     this.allUsers.forEach(a=>{
       if(a.mail == this.userModel.mail && a.mdp == this.userModel.mdp){
         this.isConnected = true;
+        this._storageService.setItem("tokenID", a.id);
+        this._storageService.setItem("tokenType", a.type);
       }
     });
 
 
     if(this.isConnected == true){
-      this._storageService.setItem("tokenID", this.userModel.id);
-      this._storageService.setItem("tokenType", this.userModel.type);
+
       if(this.userModel.type == "Administrateur"){
         this._router.navigateByUrl('/admin');
       }else{
         this._router.navigateByUrl('/boutique');
       } 
     } 
+  }
+
+
+  logOut(){
+    
   }
 }
