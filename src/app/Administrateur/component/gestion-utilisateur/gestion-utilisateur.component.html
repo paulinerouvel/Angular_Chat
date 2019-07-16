@@ -19,7 +19,7 @@
         <td>{{item.type}}</td> 
         <td>
           <input type="button" class="btn btn-primary" id="" value="Modifier"/>
-          <input type="button" class="btn btn-primary" id="" value="Supprimer"/>
+          <input type="button" class="btn btn-primary" (click)="suppress(item.id)" id="{{item.id}}" value="Supprimer"/>
         </td>
       </tr>
     </tbody>

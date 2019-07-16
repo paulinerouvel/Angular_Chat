@@ -21,7 +21,7 @@ export class UtilisateurService {
 
 
   deleteUtilisateur(id:any) {
-
+    return this.http.delete(this.constanteService.getConstante('URL_DEL_USERS')+"/"+id);
   }
 
   private handleError(error: HttpErrorResponse) {

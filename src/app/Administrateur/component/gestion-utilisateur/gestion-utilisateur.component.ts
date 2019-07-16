@@ -24,8 +24,8 @@ export class GestionUtilisateurComponent implements OnInit {
   ngOnInit() {
   }
 
-  suppress(){
-    //this._utilisateurService.deleteUtilisateur(this.token, id).subscribe(res=>location.reload(), err=> this.errorMsg = err);
+  suppress(id:any){
+    this._utilisateurService.deleteUtilisateur(id).subscribe(res=>location.reload(), err=> this.errorMsg = err);
   }
 
 
