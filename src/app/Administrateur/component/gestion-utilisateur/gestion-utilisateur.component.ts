@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Utilisateur } from 'src/app/Core/models/utilisateur';
+import { UtilisateurService } from 'src/app/Core/service/Utilisateur.service';
 
 @Component({
   selector: 'app-gestion-utilisateur',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GestionUtilisateurComponent implements OnInit {
 
-  constructor() { }
+  public users : Utilisateur[];
+  public errorMsg;
+  public token : string = localStorage.getItem('token');
+
+  constructor(private _utilisateurService : UtilisateurService) { 
+
+    this._utilisateurService.getAllUtilisateurs(this.token).subscribe(res=> this.users = res, err => this.errorMsg = err)
+
+  }
 
   ngOnInit() {
   }
+
+  suppress(id){
+    this._utilisateurService.deleteUtilisateur(this.token, id).subscribe(res=>location.reload(), err=> this.errorMsg = err);
+  }
+
 
 }
