@@ -1,22 +1,25 @@
 <input type="button" class="btn btn-primary float-right" value="Ajouter"/>
 <div class="marge"></div>
 
-<div class= "tab" *ngIf="users">
+<div class= "tab" *ngIf="chats">
   <table class="table ">
     <thead>       
-      <th scope="col">nom</th>
-      <th scope="col">prenom</th>
-      <th scope="col">mail</th>
-      <th scope="col">mdp</th>
-      <th scope="col">type</th>
+      <th scope="col">Race</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Poids</th>
+      <th scope="col">Couleur</th>
+      <th scope="col">Taille</th>
+      <th scope="col">Age</th>
+      <th scope="col">Action</th>
     </thead>
     <tbody>
-      <tr *ngFor="let item of users" >
+      <tr *ngFor="let item of chats" >
+        <td>{{item.race}}</td>
         <td>{{item.nom}}</td>
-        <td>{{item.prenom}}</td>
-        <td>{{item.mail}}</td>
-        <td>{{item.mdp}}</td>
-        <td>{{item.type}}</td> 
+        <td>{{item.poids}}</td>
+        <td>{{item.couleur}}</td>
+        <td>{{item.taille}}</td> 
+        <td>{{item.age}}</td> 
         <td>
           <input type="button" class="btn btn-primary" [routerLink]="['modifyUtilisateur', item.id]" id="" value="Modifier"/>
           <input type="button" class="btn btn-primary" id="" value="Supprimer"/>

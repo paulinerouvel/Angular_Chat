@@ -34,15 +34,13 @@ export class LoginComponent implements OnInit {
 
 
     if(this.isConnected == true){
-      this._storageService.setItem("token", this.userModel.id);
+      this._storageService.setItem("tokenID", this.userModel.id);
+      this._storageService.setItem("tokenType", this.userModel.type);
       if(this.userModel.type == "Administrateur"){
-        this._router.navigateByUrl('/boutique');
+        this._router.navigateByUrl('/admin');
       }else{
         this._router.navigateByUrl('/boutique');
-      }
-      
-    }
-    
+      } 
+    } 
   }
-
 }

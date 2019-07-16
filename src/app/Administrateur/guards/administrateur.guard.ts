@@ -9,16 +9,14 @@ import { StorageService } from 'src/app/Core/service/storage.service';
 })
 export class AdministrateurGuard implements  CanActivate{
 
-  constructor(private _storageService: StorageService, private _router: Router){
-
-  }
+  constructor(private _storageService: StorageService, private _router: Router){}
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
 
-    let data = this._storageService.getItem("token");
+    let id = this._storageService.getItem("tokenID");
+    let type = this._storageService.getItem('tokenType')
 
-    if (data != undefined) {
-      let token_decoded = jwt_decode(data);
-      if (token_decoded["type"] == 1) {
+    if (id != undefined && type != undefined) {
+      if (type == "Administrateur") {
         return true;
       }
     }
