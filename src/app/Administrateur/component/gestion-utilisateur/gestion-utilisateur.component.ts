@@ -15,15 +15,15 @@ export class GestionUtilisateurComponent implements OnInit {
 
   constructor(private _utilisateurService : UtilisateurService) { 
 
-    this._utilisateurService.getAllUtilisateurs(this.token).subscribe(res=> this.users = res, err => this.errorMsg = err)
+    this._utilisateurService.getAllUtilisateurs()
 
   }
 
   ngOnInit() {
   }
 
-  suppress(id){
-    this._utilisateurService.deleteUtilisateur(this.token, id).subscribe(res=>location.reload(), err=> this.errorMsg = err);
+  suppress(){
+    //this._utilisateurService.deleteUtilisateur(this.token, id).subscribe(res=>location.reload(), err=> this.errorMsg = err);
   }
 
 
