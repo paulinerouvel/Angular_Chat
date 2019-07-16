@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpErrorResponse, HttpClient } from '@angular/common/http';
-import { throwError, Observable } from 'rxjs';
-import { ConstantesService } from './constantes.service';
 import { Utilisateur } from '../models/utilisateur';
+import { HttpClient } from 'selenium-webdriver/http';
+import { ConstantesService } from './constantes.service';
+import { Observable, throwError } from 'rxjs';
+import { Chats } from '../models/chat';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -11,13 +13,8 @@ export class UtilisateurService {
 
   constructor(private http: HttpClient, private constanteService : ConstantesService) { }
 
-  getAllUsers(): Observable<Array<Utilisateur>> {
-    return <Observable<Array<Utilisateur>>>this.http.get(this.constanteService.getConstante('URL_GET_USERS'));
-  }
-
-
-  getUserById(id) : Observable<Utilisateur>{
-    return <Observable<Utilisateur>>this.http.get(this.constanteService.getConstante('URL_GET_USERS'+ "/" + id));
+  getAllUtilisateurs(): Observable<any> {
+    return <Observable<Array<Chats>>>this.http.get(this.constanteService.getConstante('URL_GET_CHATS'));
   }
 
 
@@ -36,4 +33,3 @@ export class UtilisateurService {
     return throwError(
       'The connection to API failed.');
   };
-}
