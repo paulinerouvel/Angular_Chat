@@ -1,7 +1,7 @@
 <input type="button" class="btn btn-primary float-right" value="Ajouter"/>
 <div class="marge"></div>
 
-<div class= "tab" *ngIf="users">
+<div class= "tab" *ngIf="propositions">
   <table class="table ">
     <thead>       
       <th scope="col">id</th>
@@ -9,10 +9,10 @@
       <th scope="col">date</th>
     </thead>
     <tbody>
-      <tr *ngFor="let item of users" >
+      <tr *ngFor="let item of propositions" >
         <td>{{item.id}}</td>
         <td>{{item.idChat}}</td>
-        <td>{{item.date}}</td>
+        <td>{{item.date | date}}</td>
         <td>
           <input type="button" class="btn btn-primary" id="" value="Modifier"/>
           <input type="button" class="btn btn-primary" id="" value="Supprimer"/>
