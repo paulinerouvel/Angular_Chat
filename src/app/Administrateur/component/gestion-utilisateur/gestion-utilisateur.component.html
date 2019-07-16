@@ -1,8 +1,9 @@
-<input type="button" routerLink="addUtilisateur" class="btn btn-primary float-right" value="Ajouter"/>
+<input type="button" class="btn btn-primary float-right" value="Ajouter"/>
+<div class="marge"></div>
+
 <div class= "tab" *ngIf="users">
   <table class="table ">
     <thead>       
-      <th scope="col">id</th>
       <th scope="col">nom</th>
       <th scope="col">prenom</th>
       <th scope="col">mail</th>
@@ -12,12 +13,10 @@
     <tbody>
       <tr *ngFor="let item of users" >
         <td>{{item.nom}}</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-       
+        <td>{{item.prenom}}</td>
+        <td>{{item.mail}}</td>
+        <td>{{item.mdp}}</td>
+        <td>{{item.type}}</td> 
         <td>
           <input type="button" class="btn btn-primary" [routerLink]="['modifyUtilisateur', item.id]" id="" value="Modifier"/>
           <input type="button" class="btn btn-primary" id="" value="Supprimer"/>

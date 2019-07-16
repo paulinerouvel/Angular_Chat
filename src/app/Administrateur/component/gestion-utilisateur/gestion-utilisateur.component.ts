@@ -15,7 +15,9 @@ export class GestionUtilisateurComponent implements OnInit {
 
   constructor(private _utilisateurService : UtilisateurService) { 
 
-    this._utilisateurService.getAllUtilisateurs()
+    this._utilisateurService.getAllUtilisateurs().subscribe(users => {
+      this.users = users;
+    })
 
   }
 
