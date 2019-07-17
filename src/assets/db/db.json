@@ -1,105 +1,97 @@
 {
-    "Chat": [
-        {
-            "id": 1,
-            "race": "Devon Rex",
-            "nom": "Minouche",
-            "poids": "12.5",
-            "couleur": "Bleu",
-            "taille": "10",
-            "age": "5",
-            "estValide" :"1"
-        },
-        {
-            "id": 2,
-            "race": "Persan",
-            "nom": "Biscotte",
-            "poids": "10.5",
-            "couleur": "Gris",
-            "taille": "18",
-            "age": "10",
-            "estValide" :"1"
-        },
-        {
-            "id": 3,
-            "race": "Siamois",
-            "nom": "Berlingot",
-            "poids": "5",
-            "couleur": "Noir",
-            "taille": "9",
-            "age": "7",
-            "estValide" :"1"
-        }
-    ],
-    "Utilisateur": [
-        {
-            "id": 1,
-            "nom": "Champaud",
-            "prenom": "Alexandre",
-            "mail": "a.champaud@myges.fr",
-            "mdp": "alexandre",
-            "type": "Administrateur"
-        },
-        {
-            "id": 2,
-            "nom": "Rouvel",
-            "prenom": "Pauline",
-            "mail": "prouvel@myges.fr",
-            "mdp": "pauline",
-            "type": "Administrateur"
-        },
-        {
-            "id": 3,
-            "nom": "Brugnet",
-            "prenom": "Grégory",
-            "mail": "g.brugnet@myges.fr",
-            "mdp": "gregory",
-            "type": "Visiteur"
-        },
-        {
-            "id":4,
-            "nom":"admin",
-            "prenom":"admin",
-            "mail":"admin@email.com",
-            "mdp":"admin",
-            "type":"Administrateur"
-        }
-    ],
-    "Commande": [
-        {
-            "id": 1,
-            "idChat": 2,
-            "idUtilisateur": 1,
-            "date": "2019-05-01"
-        },
-        {
-            "id": 2,
-            "idChat": 1,
-            "idUtilisateur": 3,
-            "date": "2019-07-12"
-        },
-        {
-            "id": 3,
-            "idChat": 3,
-            "idUtilisateur": 2,
-            "date": "2019-01-12"
-        }
-    ],
-    "Proposition": [
-        {
-            "id": 1,
-            "idChat": 1,
-            "date": "2019-05-01"
-        },
-        {
-            "id": 2,
-            "idChat": 2,
-            "date": "2019-07-12"
-        },
-        {
-            "id": 3,
-            "idChat": 3,
-            "date": "2019-01-12"
-        }
-    ]
+  "Chat": [
+    {
+      "id": 1,
+      "race": "Devon Rex",
+      "nom": "Minouche",
+      "poids": "12.5",
+      "couleur": "Bleu",
+      "taille": "10",
+      "age": "5",
+      "estValide": "1"
+    },
+    {
+      "id": 2,
+      "race": "Persan",
+      "nom": "Biscotte",
+      "poids": "10.5",
+      "couleur": "Gris",
+      "taille": "18",
+      "age": "10",
+      "estValide": "1"
+    },
+    {
+      "id": 3,
+      "race": "Siamois",
+      "nom": "Berlingot",
+      "poids": "5",
+      "couleur": "Noir",
+      "taille": "9",
+      "age": "7",
+      "estValide": "1"
+    }
+  ],
+  "Utilisateur": [
+    {
+      "id": 2,
+      "nom": "Rouvel",
+      "prenom": "Pauline",
+      "mail": "prouvel@myges.fr",
+      "mdp": "pauline",
+      "type": "Administrateur"
+    },
+    {
+      "id": 3,
+      "nom": "Brugnet",
+      "prenom": "Grégory",
+      "mail": "g.brugnet@myges.fr",
+      "mdp": "gregory",
+      "type": "Visiteur"
+    },
+    {
+      "id": 4,
+      "nom": "admin",
+      "prenom": "admin",
+      "mail": "admin@email.com",
+      "mdp": "admin",
+      "type": "Administrateur"
+    }
+  ],
+  "Commande": [
+    {
+      "id": 1,
+      "idChat": 2,
+      "idUtilisateur": 1,
+      "date": "2019-05-01"
+    },
+    {
+      "id": 2,
+      "idChat": 1,
+      "idUtilisateur": 3,
+      "date": "2019-07-12"
+    },
+    {
+      "id": 3,
+      "idChat": 3,
+      "idUtilisateur": 2,
+      "date": "2019-01-12"
+    }
+  ],
+  "Proposition": [
+    {
+      "id": 1,
+      "idChat": 1,
+      "date": "2019-05-01"
+    },
+    {
+      "id": 2,
+      "idChat": 2,
+      "date": "2019-07-12"
+    },
+    {
+      "id": 3,
+      "idChat": 3,
+      "date": "2019-01-12"
+    }
+  ]
 }
